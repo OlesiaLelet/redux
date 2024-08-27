@@ -2,7 +2,7 @@ import styles from './Posts.module.css';
 import Post from '../Post/Post.jsx';
 import { useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
-import { useState } from 'react';
+
 
 
 

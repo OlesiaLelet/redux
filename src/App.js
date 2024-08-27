@@ -2,7 +2,7 @@
 import './App.css';
 import NewPost from './components/NewPost/NewPost';
 import Posts from './components/Posts/Posts';
-import { createHashRouter, HashRouter, RouterProvider, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
@@ -13,9 +13,6 @@ function App() {
           <Route path="newPost" element={<NewPost/>}></Route>
         </Routes>
       </HashRouter>
-  
-    {/* <NewPost/>  
-    <Posts/> */}
      
     </div>
   );

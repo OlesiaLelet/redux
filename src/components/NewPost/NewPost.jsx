@@ -47,7 +47,10 @@ const NewPost = () => {
        return oneUser;
       }
    
-      const handlerSaveText = () => {
+      const handlerSaveText = (event) => {
+
+        event.preventDefault();
+
         const newPost = {
             text: text,
             link: link,
@@ -68,11 +71,11 @@ const NewPost = () => {
 
         
         }
-        dispatch(saveUser(newPost));
+      dispatch(saveUser(newPost));
         
-        setText("");
-        setLink("");
-        setUser("");
+      setText("");
+      setLink("");
+      setUser("");
     }
 
 

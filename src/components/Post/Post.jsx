@@ -6,7 +6,6 @@ import download from "../../icons/download.png";
 import verify from "../../icons/verify.png";
 import { useSelector, useDispatch } from 'react-redux';
 import { addComment} from '../../redux/postDataSlice';
-
 import { useState, useEffect } from 'react';
 import Comment from '../Comment/Comment';
 
@@ -62,13 +61,7 @@ const Post = ({name, avatar, photo, nickname, date, text, commAmount, sharingsAm
     setIsComment(!isComment);
 
   };
-console.log(isComment);
 
-  
-
- const posts = useSelector( (state) => state.postData.posts);
-//  const findedPost= posts.find(item => item.id===id)
-//  console.log(findedPost);
  
 
    const handlerSaveComment = () => {

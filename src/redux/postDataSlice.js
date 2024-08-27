@@ -92,27 +92,16 @@ export const postDataSlice = createSlice({
   name: 'postData',
   initialState,
    reducers: {
-    saveUser (state=initialState, actions) {
-      state.posts.push({text: actions.payload.text,
-      link: actions.payload.link,
-      user:  actions.payload.user,
-      id:  actions.payload.id,
-      avatar: actions.payload.avatar,
-      nickname: actions.payload.nickname,
-      date: actions.payload.date,
-      likesAmount: actions.payload.likesAmount,
-      commentsAmount: actions.payload.commentsAmount, 
-      sharingsAmount: actions.payload.sharingsAmount,
-      comments:  actions.payload.comments,
-       })
+    saveUser (state, actions) {
+      state.posts.push(actions.payload)
       
     },
-    clearPost (state=initialState) {
+    clearPost (state) {
 
       state.posts.pop();
     
     },
-    addComment (state=initialState, actions) {
+    addComment (state, actions) {
        
      
     const findedPost= state.posts.find(item => item.id===actions.payload.userId);
@@ -123,7 +112,6 @@ export const postDataSlice = createSlice({
   }
    })
 
-// Action creators are generated for each case reducer function
 export const { saveUser, clearPost, addComment} = postDataSlice.actions
 
 export default postDataSlice.reducer;
